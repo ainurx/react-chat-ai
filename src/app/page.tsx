@@ -28,7 +28,9 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Container>
-        <div className="w-100 overflow-auto" style={{ height: '75dvh', backgroundColor: '#44444E', borderRadius: '12px'}}>
+        <div className="w-100 overflow-auto pt-4" style={{ height: '75dvh', backgroundColor: '#44444E', borderRadius: '12px'}}>
+          { chat.length === 0 && <h1 className='text-center align-middle text-white'>What topic for today 🙌</h1> }
+          
           {
             chat.map((c, index)=>( 
               <div key={index} className={`d-flex ${c.isUser ? 'justify-content-end' : ''} px-4 py-1`}>
